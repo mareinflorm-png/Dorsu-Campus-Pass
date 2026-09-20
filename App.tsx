@@ -5,29 +5,42 @@ import { ScanCounter } from './src/components/ScanCounter';
 import { StudentProfile } from './src/types/student';
 
 const primaryStudent: StudentProfile = {
-  name: '',
-  idNumber: '',
-  program: '',
-  yearLevel: '',
-  avatarUrl: '',
-  campus: 'All Campuses',
+  name: 'MARIEN FLOR B. MONTECALVO',
+  idNumber: '2023-1332',
+  program: 'BS Information Technology (BSIT)',
+  yearLevel: '3rd Year - Section F',
+  avatarUrl: require('./src/components/myprofile.png'),
+  campus: 'Main Campus (Guang-guang, Mati City)',
+};
+
+const peerStudent: StudentProfile = {
+  name: 'Monica Mae B. Montecalvo',
+  idNumber: '2024-2494-MT',
+  program: 'BS Information Technology (BSIT)',
+  yearLevel: '3rd Year - Section F',
+  avatarUrl: require('./src/components/myprofile.jpg'),
+  campus: 'Main Campus (Guang-guang, Mati City)',
 };
 
 export default function App() {
   const [scanCount, setScanCount] = useState<number>(0);
-  const [isActive, setIsActive] = useState<boolean>(false);
-  const [showPeer, setShowPeer] = useState<boolean>(true);
+  const [isActive, setIsActive] = useState<boolean>(true);
+  const [showPeer, setShowPeer] = useState<boolean>(false);
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         {/* Header Banner */}
         <View style={styles.headerBanner}>
-          <Text style={styles.headerTitle}>UNIVERSITY DIGITAL STUDENT PORTAL</Text>
+          <Text style={styles.headerTitle}>DAVAO ORIENTAL STATE UNIVERSITY</Text>
+          <Text style={styles.headerSub}>FACULTY OF COMPUTING, ENGINEERING, AND TECHNOLOGY</Text>
+          <View style={styles.pillTag}>
+            <Text style={styles.pillText}>OFFICIAL STUDENT DIGITAL PASS • AY 2026–2027</Text>
+          </View>
         </View>
 
         {/* Primary Student Card Component */}
-        <StudentCard student={primaryStudent} isActive={isActive} showProfile={false} />
+        <StudentCard student={primaryStudent} isActive={isActive} />
 
         {/* Scan Counter Log Component */}
         <ScanCounter
@@ -57,7 +70,10 @@ export default function App() {
 
         {/* Peer Props Demo Section */}
         {showPeer && (
-          <View style={styles.peerSection} />
+          <View style={styles.peerSection}>
+            <Text style={styles.peerHeader}>PEER PROPS DEMO:</Text>
+            <StudentCard student={peerStudent} isActive={true} />
+          </View>
         )}
       </ScrollView>
 
@@ -89,7 +105,7 @@ const styles = StyleSheet.create({
   headerBanner: {
     backgroundColor: '#006677',
     borderRadius: 16,
-    paddingVertical: 22,
+    paddingVertical: 14,
     paddingHorizontal: 12,
     alignItems: 'center',
     marginBottom: 14,
@@ -100,6 +116,24 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     letterSpacing: 0.3,
+  },
+  headerSub: {
+    color: '#E0F2F1',
+    fontSize: 8.5,
+    textAlign: 'center',
+    marginTop: 2,
+    marginBottom: 8,
+  },
+  pillTag: {
+    backgroundColor: 'rgba(255, 255, 255, 0.18)',
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    borderRadius: 12,
+  },
+  pillText: {
+    color: '#FFFFFF',
+    fontSize: 7.5,
+    fontWeight: 'bold',
   },
   toggleBtn: { 
     backgroundColor: '#FFF8E1', 
@@ -130,7 +164,14 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   peerSection: { 
-    minHeight: 220,
+    marginTop: 2 
+  },
+  peerHeader: { 
+    fontWeight: 'bold', 
+    fontSize: 11,
+    marginBottom: 8,
+    color: '#006677',
+    letterSpacing: 0.5,
   },
   // Bottom Tab Bar Styles
   bottomNav: {
