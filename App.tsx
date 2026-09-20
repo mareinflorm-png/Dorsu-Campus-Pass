@@ -95,7 +95,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: '#F5F7FA', 
+    backgroundColor: '#F6FAFC', 
     paddingTop: 35,
   },
   scroll: { 
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   headerBanner: {
-    backgroundColor: '#006677',
+    backgroundColor: '#0A8294',
     borderRadius: 16,
     paddingVertical: 14,
     paddingHorizontal: 12,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.3,
   },
   headerSub: {
-    color: '#E0F2F1',
+    color: '#E4F5F6',
     fontSize: 8.5,
     textAlign: 'center',
     marginTop: 2,
@@ -136,8 +136,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   toggleBtn: { 
-    backgroundColor: '#FFF8E1', 
-    borderColor: '#FFE082',
+    backgroundColor: '#FFF2C9', 
+    borderColor: '#E6B832',
     borderWidth: 1,
     paddingVertical: 12, 
     borderRadius: 10, 
@@ -146,12 +146,12 @@ const styles = StyleSheet.create({
   },
   toggleText: { 
     fontWeight: 'bold', 
-    color: '#B78103',
+    color: '#855B00',
     fontSize: 13,
   },
   peerBtn: { 
     backgroundColor: '#FFFFFF', 
-    borderColor: '#E2E8F0',
+    borderColor: '#D8E0E4',
     borderWidth: 1,
     paddingVertical: 12, 
     borderRadius: 10, 
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
   },
   peerText: { 
     fontWeight: '500', 
-    color: '#2D3748',
+    color: '#25313B',
     fontSize: 13,
   },
   peerSection: { 
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold', 
     fontSize: 11,
     marginBottom: 8,
-    color: '#006677',
+    color: '#0A7180',
     letterSpacing: 0.5,
   },
   // Bottom Tab Bar Styles
@@ -179,13 +179,13 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1,
-    borderTopColor: '#EDF2F7',
+    borderTopColor: '#EEF2F3',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
   navItemActive: {
     alignItems: 'center',
-    backgroundColor: '#EEF2FF',
+    backgroundColor: '#F0F2F5',
     paddingHorizontal: 20,
     paddingVertical: 6,
     borderRadius: 16,
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
   homeIcon: {
     width: 14,
     height: 14,
-    backgroundColor: '#1E293B',
+    backgroundColor: '#17242D',
     borderRadius: 3,
     marginBottom: 2,
   },
@@ -204,17 +204,17 @@ const styles = StyleSheet.create({
     width: 14,
     height: 10,
     borderWidth: 2,
-    borderColor: '#64748B',
+    borderColor: '#4F5962',
     borderRadius: 2,
     marginBottom: 2,
   },
   navTextActive: {
     fontSize: 10,
-    color: '#1E293B',
+    color: '#17242D',
     fontWeight: '600',
   },
   navText: {
     fontSize: 10,
-    color: '#64748B',
+    color: '#4F5962',
   },
 });

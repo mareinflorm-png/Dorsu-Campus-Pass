@@ -6,8 +6,8 @@ export function StatusBadge({ isActive }: StatusBadgeProps) {
   return (
     <View style={[styles.badge, isActive ? styles.activeBg : styles.inactiveBg]}>
       <View style={styles.contentRow}>
-        <View style={styles.dot} />
-        <Text style={styles.badgeText}>
+        <View style={[styles.dot, isActive ? styles.activeDot : styles.inactiveDot]} />
+        <Text style={[styles.badgeText, isActive ? styles.activeText : styles.inactiveText]}>
           {isActive ? 'STATUS: VERIFIED ACTIVE PASS' : 'STATUS: PASS SUSPENDED'}
         </Text>
       </View>
@@ -33,19 +33,29 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 999,
-    backgroundColor: '#ffffff',
     marginRight: 8,
   },
   activeBg: { 
-    backgroundColor: '#28a745' 
+    backgroundColor: '#D8F7E5' 
   },
   inactiveBg: { 
-    backgroundColor: '#dc3545' 
+    backgroundColor: '#FFE0E0' 
   },
   badgeText: { 
-    color: '#ffffff', 
     fontWeight: 'bold', 
     fontSize: 11,
     textAlign: 'center',
+  },
+  activeDot: {
+    backgroundColor: '#16A65B',
+  },
+  inactiveDot: {
+    backgroundColor: '#D52F2F',
+  },
+  activeText: {
+    color: '#147443',
+  },
+  inactiveText: {
+    color: '#9C2929',
   },
 });

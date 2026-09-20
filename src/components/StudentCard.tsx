@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     marginBottom: 16,
     elevation: 3,
-    shadowColor: '#000',
+    shadowColor: '#8B9AA3',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -62,20 +62,20 @@ const styles = StyleSheet.create({
   },
   idNumber: {
     fontSize: 14,
-    color: '#003366',
+    color: '#087786',
     fontWeight: 'bold',
   },
   program: {
     fontSize: 14,
-    color: '#555',
+    color: '#34404A',
   },
   yearLevel: {
     fontSize: 14,
-    color: '#777',
+    color: '#8B9297',
   },
   campus: {
     marginTop: 8,
     fontSize: 12,
-    color: '#666',
+    color: '#858B90',
   },
 });

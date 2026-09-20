@@ -37,25 +37,25 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 12,
-    color: '#333',
+    color: '#17242D',
   },
   counterDisplay: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 12,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#F7FBFD',
     borderRadius: 8,
     marginBottom: 12,
   },
   label: {
     fontSize: 14,
-    color: '#555',
+    color: '#4B5563',
   },
   value: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#003366',
+    color: '#087786',
   },
   btnRow: {
     flexDirection: 'row',
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   btnPrimary: {
     flex: 2,
-    backgroundColor: '#003366',
+    backgroundColor: '#0A8294',
     padding: 12,
     borderRadius: 8,
     alignItems: 'center',
@@ -74,13 +74,13 @@ const styles = StyleSheet.create({
   },
   btnSecondary: {
     flex: 1,
-    backgroundColor: '#e2e8f0',
+    backgroundColor: '#E4E9EF',
     padding: 12,
     borderRadius: 8,
     alignItems: 'center',
   },
   btnSecText: {
-    color: '#333',
+    color: '#364152',
     fontWeight: 'bold',
   },
 });
