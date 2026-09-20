@@ -6,9 +6,10 @@ import { StatusBadge } from './StatusBadge';
 interface StudentCardProps {
   student: StudentProfile;
   isActive: boolean;
+  showProfile?: boolean;
 }
 
-export const StudentCard: React.FC<StudentCardProps> = ({ student, isActive }) => {
+export const StudentCard: React.FC<StudentCardProps> = ({ student, isActive, showProfile = true }) => {
   const imageSource: ImageSourcePropType =
     typeof student.avatarUrl === 'string'
       ? { uri: student.avatarUrl }
@@ -16,15 +17,17 @@ export const StudentCard: React.FC<StudentCardProps> = ({ student, isActive }) =
 
   return (
     <View style={styles.card}>
-      <View style={styles.topRow}>
-        <Image source={imageSource} style={styles.avatar} />
-        <View style={styles.details}>
-          <Text style={styles.name}>{student.name}</Text>
-          <Text style={styles.idNumber}>{student.idNumber}</Text>
-          <Text style={styles.program}>{student.program}</Text>
-          <Text style={styles.yearLevel}>{student.yearLevel}</Text>
+      {showProfile ? (
+        <View style={styles.topRow}>
+          <Image source={imageSource} style={styles.avatar} />
+          <View style={styles.details}>
+            <Text style={styles.name}>{student.name}</Text>
+            <Text style={styles.idNumber}>{student.idNumber}</Text>
+            <Text style={styles.program}>{student.program}</Text>
+            <Text style={styles.yearLevel}>{student.yearLevel}</Text>
+          </View>
         </View>
-      </View>
+      ) : <View style={styles.emptyProfileSpace} />}
       <StatusBadge isActive={isActive} />
       <Text style={styles.campus}>Campus: {student.campus}</Text>
     </View>
@@ -46,6 +49,9 @@ const styles = StyleSheet.create({
   topRow: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  emptyProfileSpace: {
+    height: 88,
   },
   avatar: {
     width: 64,
